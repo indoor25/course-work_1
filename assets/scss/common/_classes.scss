@@ -1,0 +1,23 @@
+@use "../mixins/index" as *;
+@use "../presets/index" as *;
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  min-height: $btn-hight;
+
+
+  font-size: 1.125em;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  font-weight: 400;
+  font-family: $font-main;
+  border: 2px solid;
+}
+
+.btn--light {
+  @include bg-color($color-light, 0.102);
+  border-color: $color-light;
+}

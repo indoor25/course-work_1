@@ -1,0 +1,7 @@
+@use "../../mixins/index" as *;
+@use "../../presets/index" as *;
+
+.overlay {
+  @include abs-position;
+  @include bg-color($color-primary, 0.8)
+}

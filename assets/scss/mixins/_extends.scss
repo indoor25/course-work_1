@@ -1,0 +1,8 @@
+@use "../presets/variables" as *;
+@use "../presets/skin" as *;
+
+%container {
+  max-width: $ul;
+  padding-inline: $gap;
+  margin-inline: auto;
+}

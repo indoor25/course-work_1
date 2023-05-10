@@ -1,0 +1,15 @@
+@use "../../mixins/index" as *;
+@use "../../presets/index" as *;
+
+.header {
+
+  background-image: url(../img/img-header.png);
+  background-position: center;
+  background-size: cover;
+
+  &-content__container,
+  &-menu__container {
+    @extend %container;
+    position: relative;
+  }
+}

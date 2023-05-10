@@ -1,0 +1,13 @@
+@use "../../mixins/index" as *;
+@use "../../presets/index" as *;
+
+.header-menu {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}

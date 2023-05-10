@@ -1,0 +1,22 @@
+@use "../../mixins/index" as *;
+@use "../../presets/index" as *;
+
+.header__logo {
+  min-width: 190px;
+  font-size: 1.5rem;
+  padding: 14px 0 0 20px;
+  letter-spacing: 0.22em;
+  line-height: 0.83em;
+  font-weight: 400;
+  font-family: $font-main;
+  color: $color-light;
+
+
+  &-decor {
+    display: inline-block;
+    padding: 18px 1px 17px 5px;
+    margin-right: 4px;
+    text-align: center;
+    border: 3px solid $color-highlight;
+  }
+}

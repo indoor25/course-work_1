@@ -1,4 +1,4 @@
-@use "../presets" as *;
+@use "../presets/index" as *;
 
 @mixin text-shortener {
   display: block;
@@ -8,8 +8,8 @@
   text-overflow: ellipsis;
 }
 
-@mixin bg-color($a: 0, $rgb: 0) {
-  background: rgba($rgb, $rgb, $rgb, $a);
+@mixin bg-color($rgb: 0, $a: 0) {
+  background: rgba($rgb, $a);
 }
 
 @mixin block-header {
