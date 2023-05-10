@@ -2,9 +2,9 @@
 @use "../../presets/index" as *;
 
 .header__logo {
-  min-width: 190px;
+  flex-grow: 0;
   font-size: 1.5rem;
-  padding: 14px 0 0 20px;
+  padding: 8px 0 0 20px;
   letter-spacing: 0.22em;
   line-height: 0.83em;
   font-weight: 400;

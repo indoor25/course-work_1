@@ -2,12 +2,38 @@
 @use "../../presets/index" as *;
 
 .header__navbar {
-  width: 100%;
+  flex-grow: 1;
+
+  &:last-of-type {
+    margin-right: 15px;
+  }
 
   &-list {
     display: grid;
+    gap: $gap-lg;
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     justify-content: end;
     @include unlist;
+  }
+
+  &-item {
+    padding: 10px 5px 0 5px;
+    font-size: 1.125em;
+    letter-spacing: 0.1em;
+    line-height: 1.11em;
+    color: $color-light;
+    font-weight: 400;
+    font-family: $font-main;
+  }
+
+  &-link {
+    display: block;
+    padding: 10px 0;
+    transition: 0.4s;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
   }
 }

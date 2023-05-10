@@ -2,12 +2,15 @@
 @use "../../presets/index" as *;
 
 .header-menu {
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: space-between;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
+  &__container {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 12px 0 0 0;
+  }
 }

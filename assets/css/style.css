@@ -202,8 +202,16 @@ template {
 }
 
 .btn--light {
+  -webkit-transition: 0.4s;
+       -o-transition: 0.4s;
+          transition: 0.4s;
+
   border-color: #ffffff;
   background: rgba(255, 255, 255, 0.102);
+}
+.btn--light:hover,
+.btn--light:focus {
+  background: #d66926;
 }
 
 *,
@@ -237,6 +245,21 @@ a {
 }
 
 .header {
+  position: relative;
+
+  display: grid;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  padding: 150px 0;
+
   background-image: url(../img/img-header.png);
   background-position: center;
   background-size: cover;
@@ -249,15 +272,6 @@ a {
 .header-content {
   position: relative;
   z-index: 1;
-
-  display: grid;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-
-  min-height: 100vh;
 }
 .header-content__title {
   margin-bottom: 55px;
@@ -287,8 +301,11 @@ a {
 }
 
 .header__logo {
-  min-width: 190px;
-  padding: 14px 0 0 20px;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+
+  padding: 8px 0 0 20px;
 
   letter-spacing: 0.22em;
 
@@ -310,7 +327,7 @@ a {
   border: 3px solid #d53d27;
 }
 
-.header-menu {
+.header-menu__container {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -326,10 +343,17 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+
+  padding: 12px 0 0 0;
 }
 
 .header__navbar {
-  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.header__navbar:last-of-type {
+  margin-right: 15px;
 }
 .header__navbar-list {
   display: grid;
@@ -342,8 +366,34 @@ a {
 
   list-style: none;
 
+  gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
   grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+}
+.header__navbar-item {
+  padding: 10px 5px 0 5px;
+
+  letter-spacing: 0.1em;
+
+  color: #ffffff;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.11em;
+}
+.header__navbar-link {
+  display: block;
+
+  padding: 10px 0;
+
+  -webkit-transition: 0.4s;
+       -o-transition: 0.4s;
+          transition: 0.4s;
+}
+.header__navbar-link:hover,
+.header__navbar-link:focus {
+  color: #d66926;
 }
 
 .overlay {

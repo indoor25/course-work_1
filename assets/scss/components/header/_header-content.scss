@@ -2,10 +2,6 @@
 @use "../../presets/index" as *;
 
 .header-content {
-  display: grid;
-  min-height: 100vh;
-  justify-content: center;
-  align-content: center;
   position: relative;
   z-index: 1;
 

@@ -20,4 +20,10 @@
 .btn--light {
   @include bg-color($color-light, 0.102);
   border-color: $color-light;
+  transition: 0.4s;
+
+  &:hover,
+  &:focus {
+    @include bg-color($color-accent, 1);
+  }
 }
