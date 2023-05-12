@@ -13,7 +13,7 @@
   background-position: center;
   background-size: cover;
 
-  &-content__container,
+  &__content-container,
   &-menu__container {
     @extend %container;
     position: relative;

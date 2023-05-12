@@ -170,7 +170,7 @@ template {
   display: none;
 }
 
-.header-content__container,
+.header__content-container,
 .header-menu__container {
   max-width: 1340px;
 
@@ -264,7 +264,7 @@ a {
   background-position: center;
   background-size: cover;
 }
-.header-content__container,
+.header__content-container,
 .header-menu__container {
   position: relative;
 }
@@ -274,8 +274,6 @@ a {
   z-index: 1;
 }
 .header-content__title {
-  margin-bottom: 55px;
-
   text-align: center;
   letter-spacing: 0.08em;
 
@@ -296,6 +294,8 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+
+  margin-top: 55px;
 
   gap: 20px;
 }

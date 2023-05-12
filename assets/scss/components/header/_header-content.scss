@@ -11,8 +11,6 @@
     color: $color-light;
     font-weight: 300;
     text-align: center;
-
-    margin-bottom: 55px;
   }
 
   &__items {
@@ -21,5 +19,6 @@
     justify-content: center;
     align-items: center;
     gap: $gap;
+    margin-top: 55px;
   }
 }
