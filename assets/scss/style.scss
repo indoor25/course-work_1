@@ -2,9 +2,5 @@
 
 @use "common/classes";
 @use "common/typography";
-@use "components/header/header";
-@use "components/header/header-content";
-@use "components/header/header-logo";
-@use "components/header/header-menu";
-@use "components/header/header-navbar";
-@use "components/header/header-overlay";
+@use "components/header/header-index";
+@use "components/sections/skills/skills-index";

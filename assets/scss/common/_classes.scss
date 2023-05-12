@@ -15,15 +15,31 @@
   font-weight: 400;
   font-family: $font-main;
   border: 2px solid;
+
+  &--light {
+    @include bg-color($color-light, 0.102);
+    border-color: $color-light;
+    transition: 0.4s;
+
+    &:hover,
+    &:focus {
+      @include bg-color($color-accent, 1);
+    }
+  }
+
+  &--main {
+    @include bg-color($color-main, 0.8);
+    border-color: $color-main;
+    transition: 0.4s;
+    min-width: 350px;
+
+    &:hover,
+    &:focus {
+      @include bg-color($color-accent, 1);
+    }
+  }
 }
 
-.btn--light {
-  @include bg-color($color-light, 0.102);
-  border-color: $color-light;
-  transition: 0.4s;
-
-  &:hover,
-  &:focus {
-    @include bg-color($color-accent, 1);
-  }
+.visually-hidden {
+  @include visually-hidden;
 }

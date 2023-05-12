@@ -1,0 +1,59 @@
+@use "../../../mixins/index" as *;
+@use "../../../presets/index" as *;
+
+$item: 9;
+
+@for $i from 1 through $item {
+  .skills-articles:nth-child(#{$i}) {
+    grid-area: ar#{$i};
+  }
+}
+
+.skills-articles {
+  display: grid;
+  position: relative;
+  overflow: hidden;
+
+  &:hover &__img {
+    transform: scale(1.1);
+  }
+
+  &:hover .skills__overlay {
+    opacity: 0.95;
+  }
+
+  &__img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
+    transition: 0.8s;
+
+  }
+
+  &__link {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    padding: 15px;
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    color: $color-light;
+    font-weight: 700;
+    transition: 0.4s;
+
+
+    &:hover {
+      color: $color-accent;
+    }
+
+
+  }
+
+}

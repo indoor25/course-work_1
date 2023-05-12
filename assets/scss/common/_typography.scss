@@ -22,9 +22,11 @@ h1 {
   margin: 0;
 }
 
-h2 {}
-
-h3 {}
+h2,
+h3 {
+  font-family: $font-main;
+  margin: 0;
+}
 
 a {
   text-decoration: none;
