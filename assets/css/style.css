@@ -170,12 +170,31 @@ template {
   display: none;
 }
 
+.join__form-container,
+.join__articles-container,
 .header__content-container,
 .header-menu__container {
   max-width: 1340px;
 
   margin-inline: auto;
   padding-inline: 20px;
+}
+
+.input-style input,
+.input-btn input {
+  min-width: 420px;
+  min-height: 60px;
+  padding: 0 35px 0 35px;
+
+  letter-spacing: 0.11em;
+
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 2.166em;
 }
 .btn {
   display: -webkit-box;
@@ -239,6 +258,10 @@ template {
   padding: 0;
 
   border: 0;
+}
+
+.active {
+  color: #d66926;
 }
 
 *,
@@ -576,4 +599,161 @@ a {
 }
 .skills-articles__link:hover {
   color: #d66926;
+}
+
+.join {
+  margin-top: 20px;
+
+  background-color: #e5e5e5;
+}
+.join__articles-container {
+  padding: 100px 20px 60px;
+}
+.join__article {
+  display: grid;
+
+  gap: 40px;
+  grid-template-columns: 4fr 2px 1fr;
+}
+.join__article-line {
+  position: relative;
+  top: 140px;
+
+  width: 2px;
+  height: 200px;
+
+  background: rgba(99, 117, 136, 0.1);
+}
+.join__article-title {
+  margin-bottom: 40px;
+
+  letter-spacing: 0.1em;
+
+  color: #2d3651;
+
+  font-family: "Roboto Slab", serif;
+  font-size: 2.5rem;
+  line-height: 1.2em;
+}
+.join__post {
+  padding-right: 20px;
+
+  letter-spacing: 0.055em;
+
+  color: #637588;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.15em;
+}
+.join__img {
+  display: grid;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+
+  justify-items: center;
+}
+
+.join__form {
+  background-color: #2d3651;
+}
+.join__form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  min-height: 120px;
+
+  gap: 20px;
+}
+
+.input-style input {
+  -webkit-transition: background-color 0.4s, border-color 0.4s;
+       -o-transition: background-color 0.4s, border-color 0.4s;
+          transition: background-color 0.4s, border-color 0.4s;
+
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.051);
+}
+.input-style input::-webkit-input-placeholder {
+  -webkit-transition: 0.4s;
+          transition: 0.4s;
+
+  color: #637588;
+}
+.input-style input::-moz-placeholder {
+  -moz-transition: 0.4s;
+       transition: 0.4s;
+
+  color: #637588;
+}
+.input-style input:-ms-input-placeholder {
+  -ms-transition: 0.4s;
+      transition: 0.4s;
+
+  color: #637588;
+}
+.input-style input::-ms-input-placeholder {
+  -ms-transition: 0.4s;
+      transition: 0.4s;
+
+  color: #637588;
+}
+.input-style input::placeholder {
+  -webkit-transition: 0.4s;
+       -o-transition: 0.4s;
+          transition: 0.4s;
+
+  color: #637588;
+}
+.input-style input:hover,
+.input-style input:focus {
+  border-color: #637588;
+  border-bottom: 2px solid white;
+  outline: none;
+  background: rgba(255, 255, 255, 0.149);
+}
+.input-style input:hover::-webkit-input-placeholder,
+.input-style input:focus::-webkit-input-placeholder {
+  color: #e5e5e5;
+}
+.input-style input:hover::-moz-placeholder,
+.input-style input:focus::-moz-placeholder {
+  color: #e5e5e5;
+}
+.input-style input:hover:-ms-input-placeholder,
+.input-style input:focus:-ms-input-placeholder {
+  color: #e5e5e5;
+}
+.input-style input:hover::-ms-input-placeholder,
+.input-style input:focus::-ms-input-placeholder {
+  color: #e5e5e5;
+}
+.input-style input:hover::placeholder,
+.input-style input:focus::placeholder {
+  color: #e5e5e5;
+}
+
+.input-btn input {
+  -webkit-transition: background-color 0.4s, border 0.4s;
+       -o-transition: background-color 0.4s, border 0.4s;
+          transition: background-color 0.4s, border 0.4s;
+
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.102);
+}
+.input-btn input:hover,
+.input-btn input:focus {
+  border: 2px solid #ffffff;
+  background-color: #d66926;
 }

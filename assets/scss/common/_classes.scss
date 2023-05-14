@@ -43,3 +43,7 @@
 .visually-hidden {
   @include visually-hidden;
 }
+
+.active {
+  color: $color-accent;
+}
