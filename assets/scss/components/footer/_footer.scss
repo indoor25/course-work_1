@@ -1,0 +1,69 @@
+@use "../../mixins/index" as *;
+@use "../../presets/index" as *;
+
+.footer {
+  width: 100%;
+  background-color: $color-main;
+  // .footer__container
+
+  &__container {
+    @extend %container;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+  }
+
+  // .footer__content
+
+  &__content {
+
+    display: grid;
+    justify-items: center;
+    align-content: center;
+  }
+
+  // .footer__social
+
+  &__social {
+    display: flex;
+    gap: $gap;
+  }
+
+  // .footer__hr
+
+  &__hr {
+    height: 2px;
+    min-width: 80px;
+    margin: 27px 0 21px 0;
+    @include bg-color($color-light, 0.1)
+  }
+
+  // .footer__brand
+
+  &__brand {
+    text-align: center;
+    color: $color-gray-light;
+    font-family: $font-main;
+
+    & span:nth-child(1) {
+      color: $color-gray;
+      letter-spacing: 0.33em;
+      font-weight: 100;
+    }
+
+    & span:nth-child(3) {
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+  }
+}
+
+.fab {
+  font-size: 36px;
+  transition: color 0.4s;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
