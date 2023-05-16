@@ -971,14 +971,14 @@ a {
   font-weight: 700;
 }
 
-.fab {
+.fa-brands {
   -webkit-transition: color 0.4s;
        -o-transition: color 0.4s;
           transition: color 0.4s;
 
   font-size: 36px;
 }
-.fab:hover,
-.fab:focus {
+.fa-brands:hover,
+.fa-brands:focus {
   color: #d66926;
 }
