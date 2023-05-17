@@ -5,21 +5,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 250px;
-  min-height: $btn-hight;
 
 
-  font-size: 1.125em;
   letter-spacing: 0.1em;
   line-height: 1;
   font-weight: 400;
   font-family: $font-main;
   border: 2px solid;
 
+  @include lg-min {
+
+    min-height: $btn-hight;
+    font-size: 1.125em;
+  }
+
+  @include lg-md {
+    min-width: 200px;
+    min-height: 50px;
+    font-size: 1em;
+  }
+
   &--light {
+    min-width: 250px;
+    min-height: $btn-hight;
+    font-size: 1.125em;
     @include bg-color($color-light, 0.102);
     border-color: $color-light;
-    transition: 0.4s;
+    transition: border-color 0.4s;
 
     &:hover,
     &:focus {
@@ -28,10 +40,12 @@
   }
 
   &--main {
+    min-width: 350px;
+    min-height: $btn-hight;
+    font-size: 1.125em;
     @include bg-color($color-main, 0.8);
     border-color: $color-main;
-    transition: 0.4s;
-    min-width: 350px;
+    transition: border-color 0.4s;
 
     &:hover,
     &:focus {

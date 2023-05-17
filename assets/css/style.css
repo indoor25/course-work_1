@@ -184,7 +184,7 @@ template {
 
 .input-style input,
 .input-btn input {
-  min-width: 420px;
+  width: 100%;
   min-height: 60px;
   padding: 0 35px 0 35px;
 
@@ -209,25 +209,26 @@ template {
   -ms-flex-pack: center;
   justify-content: center;
 
-  min-width: 250px;
-  min-height: 60px;
-
   letter-spacing: 0.1em;
 
   border: 2px solid;
 
   font-family: "Roboto", sans-serif;
-  font-size: 1.125em;
   font-weight: 400;
   line-height: 1;
 }
 .btn--light {
-  -webkit-transition: 0.4s;
-       -o-transition: 0.4s;
-          transition: 0.4s;
+  min-width: 250px;
+  min-height: 60px;
+
+  -webkit-transition: border-color 0.4s;
+       -o-transition: border-color 0.4s;
+          transition: border-color 0.4s;
 
   border-color: #ffffff;
   background: rgba(255, 255, 255, 0.102);
+
+  font-size: 1.125em;
 }
 .btn--light:hover,
 .btn--light:focus {
@@ -235,13 +236,16 @@ template {
 }
 .btn--main {
   min-width: 350px;
+  min-height: 60px;
 
-  -webkit-transition: 0.4s;
-       -o-transition: 0.4s;
-          transition: 0.4s;
+  -webkit-transition: border-color 0.4s;
+       -o-transition: border-color 0.4s;
+          transition: border-color 0.4s;
 
   border-color: #2d3651;
   background: rgba(45, 54, 81, 0.8);
+
+  font-size: 1.125em;
 }
 .btn--main:hover,
 .btn--main:focus {
@@ -680,14 +684,10 @@ a {
   background-color: #2d3651;
 }
 .join__form-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
   -webkit-box-align: center;
   align-items: center;
   -ms-flex-align: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -695,6 +695,7 @@ a {
   min-height: 120px;
 
   gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .input-style input {
@@ -981,4 +982,19 @@ a {
 .fa-brands:hover,
 .fa-brands:focus {
   color: #d66926;
+}
+@media (min-width: 992px) {
+  .btn {
+    min-height: 60px;
+
+    font-size: 1.125em;
+  }
+}
+@media (max-width: 991.8px) and (min-width: 768px) {
+  .btn {
+    min-width: 200px;
+    min-height: 50px;
+
+    font-size: 1em;
+  }
 }

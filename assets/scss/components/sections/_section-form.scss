@@ -8,45 +8,52 @@
   &-container {
     min-height: 120px;
     @extend %container;
-    @include btn-container;
+    @include form-container;
 
   }
 }
 
 
-.input-style input {
-  @extend %input-style;
-  @include bg-color($color-light, 0.051);
-  color: $color-light;
-  transition: background-color 0.4s, border-color 0.4s;
+.input-style {
 
-  &::placeholder {
-    color: $color-gray;
-    transition: 0.4s;
-  }
-
-  &:hover,
-  &:focus {
-    @include bg-color($color-light, 0.149);
-    border-color: $color-gray;
-    border-bottom: 2px solid rgba($color-light, 1);
-    outline: none;
+  & input {
+    @extend %input-style;
+    @include bg-color($color-light, 0.051);
+    color: $color-light;
+    transition: background-color 0.4s, border-color 0.4s;
 
     &::placeholder {
-      color: $color-gray-light;
+      color: $color-gray;
+      transition: 0.4s;
+    }
+
+    &:hover,
+    &:focus {
+      @include bg-color($color-light, 0.149);
+      border-color: $color-gray;
+      border-bottom: 2px solid rgba($color-light, 1);
+      outline: none;
+
+      &::placeholder {
+        color: $color-gray-light;
+      }
     }
   }
 }
 
-.input-btn input {
-  @extend %input-style;
-  @include bg-color($color-light, 0.102);
-  color: $color-light;
-  transition: background-color 0.4s, border 0.4s;
+.input-btn {
 
-  &:hover,
-  &:focus {
-    background-color: $color-accent;
-    border: 2px solid $color-light;
+  & input {
+    @extend %input-style;
+    @include bg-color($color-light, 0.102);
+    color: $color-light;
+    transition: background-color 0.4s, border 0.4s;
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent;
+      border: 2px solid $color-light;
+    }
   }
+
 }
