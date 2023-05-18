@@ -42,11 +42,18 @@ $item: 9;
     width: 100%;
     z-index: 2;
     padding: 15px;
-    font-size: 1.25rem;
     letter-spacing: 0.1em;
     color: $color-light;
     font-weight: 700;
-    transition: 0.4s;
+    transition: color 0.4s;
+
+    @include md-min {
+      font-size: 1.25rem;
+    }
+
+    @include md {
+      font-size: 1.125rem;
+    }
 
 
     &:hover {

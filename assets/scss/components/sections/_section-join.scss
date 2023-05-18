@@ -10,23 +10,45 @@
 
   &__articles-container {
     @extend %container;
-    padding: $gap-x5 $gap $gap-x3;
+    padding: $gap-x5 $gap $gap-x5;
   }
 
   // .join__article
 
   &__article {
     display: grid;
-    grid-template-columns: 2fr 1fr 100px 1fr;
+
+    @include lg-min {
+      grid-template-columns: 2fr 1fr 100px 271px;
+    }
+
+    @include lg-md {
+      grid-template-columns: 2fr 1fr 40px 271px;
+    }
+
+    @include md-sm {
+      grid-template-columns: 2fr 1fr 20px 236px;
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+
+    }
 
     &-line {
-      grid-column: 3 / span 1;
-      position: relative;
-      top: 0;
-      left: 50%;
-      height: $gap-x10;
-      width: 2px;
-      @include bg-color($color-gray, 0.1)
+      @include sm-min {
+        grid-column: 3 / span 1;
+        position: relative;
+        top: 0;
+        left: 50%;
+        height: $gap-x10;
+        width: 2px;
+        @include bg-color($color-gray, 0.1)
+      }
+
+      @include sm {
+        display: none;
+      }
     }
   }
 
@@ -34,44 +56,78 @@
   // .join__article-title
 
   &__article-title {
-    grid-column: 1 / span 3;
-    margin-bottom: $gap-x2;
-    font-size: 2.5rem;
     font-family: $font-header;
     color: $color-main;
     line-height: 1.2em;
     letter-spacing: 0.1em;
+
+    @include lg-min {
+      margin-bottom: 48px;
+      font-size: 2.5rem;
+    }
+
+    @include lg-md {
+      margin-bottom: 42px;
+      font-size: 2rem;
+    }
+
+    @include md {
+      margin-bottom: 36px;
+      font-size: 1.5rem;
+    }
+
+    @include sm {
+      text-align: center;
+    }
+
+    @include sm-min {
+      grid-column: 1 / span 3;
+
+    }
   }
 
   // .join__post
 
   &__post {
-    grid-column: 1 / span 2;
     padding-right: $gap;
-    font-size: 1.125rem;
     letter-spacing: 0.055em;
     line-height: 1.15em;
     color: $color-gray;
     font-weight: 400;
     font-family: $font-main;
 
+    @include lg-min {
+      font-size: 1.125rem;
+    }
+
+    @include sm-min {
+      grid-column: 1 / span 2;
+    }
+
     & p:first-of-type {
-      margin-top: 0;
+      margin-top: -5px;
+    }
+
+    & p:last-of-type {
+      margin-bottom: 0;
     }
   }
 
   // .join__img
 
   &__img {
-    grid-column: 4 / span 1;
-    grid-row: 1 / span 2;
     display: grid;
     align-items: center;
     justify-items: center;
 
+    @include sm-min {
+      grid-column: 4 / span 1;
+      grid-row: 1 / span 2;
+    }
+
     & img {
-      max-height: 470px;
-      width: 100%;
+      max-height: 480px;
+      max-width: 100%;
       object-fit: contain;
     }
   }

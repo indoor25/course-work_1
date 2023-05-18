@@ -9,11 +9,17 @@
   }
 
   &-list {
-    display: grid;
-    gap: $gap-lg;
-    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-    justify-content: end;
-    @include unlist;
+    @include md-min {
+      display: grid;
+      gap: $gap-lg;
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+      justify-content: end;
+      @include unlist;
+    }
+
+    @include md {
+      display: none;
+    }
   }
 
   &-item {

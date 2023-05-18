@@ -6,10 +6,22 @@
   // .join__form-container
 
   &-container {
-    min-height: 120px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     @extend %container;
     @include form-container;
 
+    @include md-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include md-sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -37,6 +49,13 @@
       &::placeholder {
         color: $color-gray-light;
       }
+    }
+  }
+
+  @include md-sm {
+
+    &:nth-child(1) {
+      grid-column: 1 / span 2;
     }
   }
 }

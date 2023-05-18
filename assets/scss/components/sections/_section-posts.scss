@@ -14,32 +14,79 @@ $item: 6;
   // .posts__title
 
   &__title {
-    margin-bottom: $gap-x2;
-    font-size: 2.5rem;
     letter-spacing: 0.1em;
     line-height: 1.2em;
     color: $color-main;
     font-weight: 700;
     font-family: $font-header;
+
+    @include lg-min {
+      margin-bottom: 48px;
+      font-size: 2.5rem;
+    }
+
+    @include lg-md {
+      margin-bottom: 42px;
+      font-size: 2rem;
+    }
+
+    @include md {
+      margin-bottom: 36px;
+      font-size: 1.5rem;
+    }
+
+    @include sm {
+      text-align: center;
+    }
   }
+
 
   // .posts__container
 
   &__container {
     @extend %container;
-    padding-top: $gap-x4;
+    padding-top: $gap-x5;
 
   }
 
   &__wrapper {
-    padding-top: $gap-sm;
     margin-bottom: $gap;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-      "p_ar1 p_ar1 p_ar2 p_ar3"
-      "p_ar4 p_ar5 p_ar6 p_ar6";
     gap: $gap;
+
+    @include lg-min {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        "p_ar1 p_ar1 p_ar2 p_ar3"
+        "p_ar4 p_ar5 p_ar6 p_ar6";
+    }
+
+    @include lg-md {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "p_ar1 p_ar1 p_ar2"
+        "p_ar3 p_ar4 p_ar4"
+        "p_ar5 p_ar5 p_ar6";
+    }
+
+    @include md-sm {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "p_ar1 p_ar2"
+        "p_ar3 p_ar4"
+        "p_ar5 p_ar6";
+    }
+
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas:
+        "p_ar1"
+        "p_ar2"
+        "p_ar3"
+        "p_ar4"
+        "p_ar5"
+        "p_ar6";
+    }
   }
 
   // .posts__article
@@ -115,6 +162,17 @@ $item: 6;
 
   &__btns {
     @include btn-container;
-    margin-bottom: $gap-x5;
+
+    @include lg-min {
+      margin-bottom: $gap-x5;
+    }
+
+    @include lg-md {
+      margin-bottom: $gap-x4;
+    }
+
+    @include md {
+      margin-bottom: $gap-x3;
+    }
   }
 }

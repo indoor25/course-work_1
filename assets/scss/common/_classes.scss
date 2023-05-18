@@ -5,33 +5,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-
+  padding: 0.5em 1rem;
   letter-spacing: 0.1em;
-  line-height: 1;
   font-weight: 400;
   font-family: $font-main;
   border: 2px solid;
 
-  @include lg-min {
-
-    min-height: $btn-hight;
-    font-size: 1.125em;
-  }
-
-  @include lg-md {
-    min-width: 200px;
-    min-height: 50px;
-    font-size: 1em;
-  }
-
   &--light {
-    min-width: 250px;
-    min-height: $btn-hight;
-    font-size: 1.125em;
     @include bg-color($color-light, 0.102);
     border-color: $color-light;
     transition: border-color 0.4s;
+
+    @include lg-min {
+      min-width: 250px;
+      min-height: $btn-hight;
+      font-size: 1.125em;
+    }
+
+    @include lg-md {
+      min-width: 200px;
+      min-height: 50px;
+      font-size: 1em;
+    }
+
+    @include md {
+      min-width: 170px;
+      min-height: 40px;
+      font-size: 1em;
+    }
 
     &:hover,
     &:focus {
@@ -40,12 +41,20 @@
   }
 
   &--main {
-    min-width: 350px;
     min-height: $btn-hight;
     font-size: 1.125em;
     @include bg-color($color-main, 0.8);
     border-color: $color-main;
     transition: border-color 0.4s;
+
+    @include sm-min {
+      min-width: 350px;
+
+    }
+
+    @include sm {
+      width: 100%;
+    }
 
     &:hover,
     &:focus {

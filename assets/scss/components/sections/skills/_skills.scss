@@ -9,20 +9,71 @@
 
   &__container {
     min-height: 100vh;
-    padding: 10px;
-    margin-bottom: 10px;
 
+    @include sm-min {
+      padding: 10px 10px 0 10px;
+    }
+
+    @include sm {
+      padding: 20px 20px 0 20px;
+    }
   }
 
   &__part {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: $gap;
     grid-auto-rows: calc(33.333vh - 13.333px);
-    grid-template-areas:
-      "ar1 ar1 ar2 ar3"
-      "ar4 ar5 ar5 ar6"
-      "ar7 ar8 ar9 ar6";
-    gap: $gap-sm;
+
+    @include lg-min {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        "ar1 ar1 ar2 ar3"
+        "ar4 ar5 ar5 ar6"
+        "ar7 ar8 ar9 ar6";
+    }
+
+    @include lg-md {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "ar1 ar1 ar2"
+        "ar3 ar4 ar4"
+        "ar5 ar5 ar6"
+        "ar7 ar8 ar6"
+        "ar7 ar9 ar9";
+    }
+
+    @include md-sm {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "ar1 ar2"
+        "ar3 ar2"
+        "ar4 ar4"
+        "ar5 ar6"
+        "ar5 ar7"
+        "ar8 ar9";
+    }
+
+    @include sm {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas:
+        "ar1"
+        "ar2"
+        "ar3"
+        "ar4"
+        "ar5"
+        "ar6"
+        "ar7"
+        "ar8"
+        "ar9";
+      gap: $gap;
+    }
+
+    @include sm-min {
+      gap: $gap-sm;
+    }
   }
 
   &__overlay {
