@@ -155,8 +155,20 @@ $diff: 0.2px;
   }
 }
 
+@mixin mdh-min {
+  @media (min-height: $md) {
+    @content;
+  }
+}
+
 @mixin md {
   @media (max-width: ($md - $diff)) {
+    @content;
+  }
+}
+
+@mixin mdh {
+  @media (max-height: ($md - $diff)) {
     @content;
   }
 }

@@ -538,8 +538,6 @@ a {
 }
 .skills__part {
   margin-bottom: 20px;
-
-  grid-auto-rows: calc(33.333vh - 13.333px);
 }
 .skills__overlay {
   position: absolute;
@@ -1027,6 +1025,11 @@ a {
     grid-row: 1/span 2;
   }
 }
+@media (min-height: 768px) {
+  .skills__part {
+    grid-auto-rows: calc(33.3333333333vh - 13.3333333333px);
+  }
+}
 @media (min-width: 768px) {
   .header__navbar-list {
     display: grid;
@@ -1133,6 +1136,11 @@ a {
   }
   .posts__btns {
     margin-bottom: 80px;
+  }
+}
+@media (max-height: 767.8px) {
+  .skills__part {
+    grid-auto-rows: 242.6666666667px;
   }
 }
 @media (max-width: 767.8px) {
