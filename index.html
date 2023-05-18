@@ -37,6 +37,12 @@
           <a href="#"><span class="header__logo-decor">SITE</span>LOGO</a>
         </div>
         <nav class="header__navbar">
+          <div class="header__navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <ul class="header__navbar-list">
             <li class="header__navbar-item">
               <a class="header__navbar-link" href="">Home</a>
@@ -266,6 +272,14 @@
   <script src="libs/jquery/dist/jquery.min.js"></script>
   <!-- Подключаем наш основной скрипт, с которым будем работать -->
   <script src="assets/js/main.js"></script>
+  <script>
+    $(function () {
+      $('.header__navbar-burger').on('click', function () {
+        $(this).toggleClass('active');
+        $('.header__navbar-list').stop(true, true).slideToggle('500');
+      });
+    });
+  </script>
 
 </body>
 

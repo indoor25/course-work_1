@@ -3,14 +3,16 @@
 
 
 .join {
-  background-color: $color-gray-light;
   margin-top: $gap;
+
+  background-color: $color-gray-light;
 
   // .join__articles-container
 
   &__articles-container {
-    @extend %container;
     padding: $gap-x5 $gap $gap-x5;
+
+    @extend %container;
   }
 
   // .join__article
@@ -21,31 +23,28 @@
     @include lg-min {
       grid-template-columns: 2fr 1fr 100px 271px;
     }
-
     @include lg-md {
       grid-template-columns: 2fr 1fr 40px 271px;
     }
-
     @include md-sm {
       grid-template-columns: 2fr 1fr 20px 236px;
     }
-
     @include sm {
       grid-template-columns: 1fr;
-
     }
 
     &-line {
       @include sm-min {
-        grid-column: 3 / span 1;
         position: relative;
         top: 0;
         left: 50%;
-        height: $gap-x10;
-        width: 2px;
-        @include bg-color($color-gray, 0.1)
-      }
 
+        width: 2px;
+        height: $gap-x10;
+
+        grid-column: 3 / span 1;
+        @include bg-color($color-gray, 0.1);
+      }
       @include sm {
         display: none;
       }
@@ -56,33 +55,33 @@
   // .join__article-title
 
   &__article-title {
-    font-family: $font-header;
-    color: $color-main;
-    line-height: 1.2em;
     letter-spacing: 0.1em;
+
+    color: $color-main;
+
+    font-family: $font-header;
+    line-height: 1.2em;
 
     @include lg-min {
       margin-bottom: 48px;
+
       font-size: 2.5rem;
     }
-
     @include lg-md {
       margin-bottom: 42px;
+
       font-size: 2rem;
     }
-
     @include md {
       margin-bottom: 36px;
+
       font-size: 1.5rem;
     }
-
     @include sm {
       text-align: center;
     }
-
     @include sm-min {
       grid-column: 1 / span 3;
-
     }
   }
 
@@ -90,16 +89,18 @@
 
   &__post {
     padding-right: $gap;
+
     letter-spacing: 0.055em;
-    line-height: 1.15em;
+
     color: $color-gray;
-    font-weight: 400;
+
     font-family: $font-main;
+    font-weight: 400;
+    line-height: 1.15em;
 
     @include lg-min {
       font-size: 1.125rem;
     }
-
     @include sm-min {
       grid-column: 1 / span 2;
     }
@@ -118,16 +119,17 @@
   &__img {
     display: grid;
     align-items: center;
-    justify-items: center;
 
     @include sm-min {
       grid-column: 4 / span 1;
       grid-row: 1 / span 2;
     }
+    justify-items: center;
 
     & img {
-      max-height: 480px;
       max-width: 100%;
+      max-height: 480px;
+
       object-fit: contain;
     }
   }

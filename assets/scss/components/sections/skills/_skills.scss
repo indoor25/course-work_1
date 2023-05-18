@@ -3,8 +3,9 @@
 
 .skills {
   &__btns {
-    @include btn-container;
     padding-bottom: $gap;
+
+    @include btn-container;
   }
 
   &__container {
@@ -13,7 +14,6 @@
     @include sm-min {
       padding: 10px 10px 0 10px;
     }
-
     @include sm {
       padding: 20px 20px 0 20px;
     }
@@ -21,65 +21,63 @@
 
   &__part {
     margin-bottom: $gap;
-    grid-auto-rows: calc(33.333vh - 13.333px);
 
+    grid-auto-rows: calc(33.333vh - 13.333px);
     @include lg-min {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-areas:
-        "ar1 ar1 ar2 ar3"
-        "ar4 ar5 ar5 ar6"
-        "ar7 ar8 ar9 ar6";
-    }
 
+      grid-template-areas: "ar1 ar1 ar2 ar3"
+      "ar4 ar5 ar5 ar6"
+      "ar7 ar8 ar9 ar6";
+      grid-template-columns: repeat(4, 1fr);
+    }
     @include lg-md {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas:
-        "ar1 ar1 ar2"
-        "ar3 ar4 ar4"
-        "ar5 ar5 ar6"
-        "ar7 ar8 ar6"
-        "ar7 ar9 ar9";
-    }
 
+      grid-template-areas: "ar1 ar1 ar2"
+      "ar3 ar4 ar4"
+      "ar5 ar5 ar6"
+      "ar7 ar8 ar6"
+      "ar7 ar9 ar9";
+      grid-template-columns: repeat(3, 1fr);
+    }
     @include md-sm {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-areas:
-        "ar1 ar2"
-        "ar3 ar2"
-        "ar4 ar4"
-        "ar5 ar6"
-        "ar5 ar7"
-        "ar8 ar9";
-    }
 
+      grid-template-areas: "ar1 ar2"
+      "ar3 ar2"
+      "ar4 ar4"
+      "ar5 ar6"
+      "ar5 ar7"
+      "ar8 ar9";
+      grid-template-columns: repeat(2, 1fr);
+    }
     @include sm {
       display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-areas:
-        "ar1"
-        "ar2"
-        "ar3"
-        "ar4"
-        "ar5"
-        "ar6"
-        "ar7"
-        "ar8"
-        "ar9";
-      gap: $gap;
-    }
 
+      gap: $gap;
+      grid-template-areas: "ar1"
+      "ar2"
+      "ar3"
+      "ar4"
+      "ar5"
+      "ar6"
+      "ar7"
+      "ar8"
+      "ar9";
+      grid-template-columns: repeat(1, 1fr);
+    }
     @include sm-min {
       gap: $gap-sm;
     }
   }
 
   &__overlay {
-    @include abs-position;
-    background-color: $color-main;
-    opacity: 0.8;
     transition: opacity 0.5s;
+
+    opacity: 0.8;
+    background-color: $color-main;
+
+    @include abs-position;
   }
 }

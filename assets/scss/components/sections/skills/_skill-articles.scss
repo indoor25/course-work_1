@@ -1,6 +1,5 @@
 @use "../../../mixins/index" as *;
 @use "../../../presets/index" as *;
-
 $item: 9;
 
 @for $i from 1 through $item {
@@ -10,8 +9,9 @@ $item: 9;
 }
 
 .skills-articles {
-  display: grid;
   position: relative;
+
+  display: grid;
   overflow: hidden;
 
   &:hover &__img {
@@ -24,43 +24,46 @@ $item: 9;
 
   &__img {
     position: absolute;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: 50% 50%;
     z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
     transition: 0.8s;
 
+    background-position: 50% 50%;
+    background-size: cover;
   }
 
   &__link {
     position: relative;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
     z-index: 2;
+
+    display: grid;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
     padding: 15px;
-    letter-spacing: 0.1em;
-    color: $color-light;
-    font-weight: 700;
+
     transition: color 0.4s;
+    letter-spacing: 0.1em;
+
+    color: $color-light;
+
+    font-weight: 700;
 
     @include md-min {
       font-size: 1.25rem;
     }
-
     @include md {
       font-size: 1.125rem;
     }
+    justify-items: center;
 
 
     &:hover {
       color: $color-accent;
     }
-
-
   }
-
 }

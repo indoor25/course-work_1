@@ -3,18 +3,20 @@
 
 .header-menu {
   &__container {
-    display: flex;
     position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
+
     padding: 12px 0 20px 0;
 
     @include md {
-      box-shadow: 3px 4px 20px -10px black;
+      box-shadow: 3px 4px 20px -10px $color-black;
     }
   }
 }

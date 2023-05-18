@@ -13,22 +13,26 @@ html {
 }
 
 body {
-  background-color: $color-light;
   overflow-y: scroll;
+
+  background-color: $color-light;
 }
 
 h1 {
-  font-family: $font-header;
   margin: 0;
+
+  font-family: $font-header;
 }
 
 h2,
 h3 {
-  font-family: $font-main;
   margin: 0;
+
+  font-family: $font-main;
 }
 
 a {
   text-decoration: none;
+
   color: $color-light;
 }

@@ -8,17 +8,15 @@
   &-container {
     padding-top: 30px;
     padding-bottom: 30px;
+
     @extend %container;
     @include form-container;
-
     @include md-min {
       grid-template-columns: repeat(3, 1fr);
     }
-
     @include md-sm {
       grid-template-columns: repeat(2, 1fr);
     }
-
     @include sm {
       grid-template-columns: 1fr;
     }
@@ -27,52 +25,53 @@
 
 
 .input-style {
-
+  @include md-sm {
+    &:nth-child(1) {
+      grid-column: 1 / span 2;
+    }
+  }
   & input {
-    @extend %input-style;
-    @include bg-color($color-light, 0.051);
-    color: $color-light;
     transition: background-color 0.4s, border-color 0.4s;
 
+    color: $color-light;
+
+    @extend %input-style;
+    @include bg-color($color-light, 0.051);
+
     &::placeholder {
-      color: $color-gray;
       transition: 0.4s;
+
+      color: $color-gray;
     }
 
     &:hover,
     &:focus {
-      @include bg-color($color-light, 0.149);
       border-color: $color-gray;
       border-bottom: 2px solid rgba($color-light, 1);
       outline: none;
+
+      @include bg-color($color-light, 0.149);
 
       &::placeholder {
         color: $color-gray-light;
       }
     }
   }
-
-  @include md-sm {
-
-    &:nth-child(1) {
-      grid-column: 1 / span 2;
-    }
-  }
 }
 
 .input-btn {
-
   & input {
+    transition: background-color 0.4s, border 0.4s;
+
+    color: $color-light;
+
     @extend %input-style;
     @include bg-color($color-light, 0.102);
-    color: $color-light;
-    transition: background-color 0.4s, border 0.4s;
 
     &:hover,
     &:focus {
-      background-color: $color-accent;
       border: 2px solid $color-light;
+      background-color: $color-accent;
     }
   }
-
 }

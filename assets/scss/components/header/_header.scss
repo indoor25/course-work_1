@@ -2,20 +2,24 @@
 @use "../../presets/index" as *;
 
 .header {
-  min-height: 100vh;
   position: relative;
+
   display: grid;
-  justify-content: center;
-  align-items: center;
   align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
   padding: 150px 0;
+
   background-image: url(../img/img-header.png);
   background-position: center;
   background-size: cover;
 
   &__content-container,
   &-menu__container {
-    @extend %container;
     position: relative;
+
+    @extend %container;
   }
 }

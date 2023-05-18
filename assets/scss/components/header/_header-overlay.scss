@@ -3,5 +3,5 @@
 
 .overlay {
   @include abs-position;
-  @include bg-color($color-main, 0.8)
+  @include bg-color($color-main, 0.8);
 }

@@ -4,42 +4,138 @@
 .header__navbar {
   flex-grow: 1;
 
+  @include md {
+    display: grid;
+    justify-content: end;
+  }
+
   &:last-of-type {
     margin-right: 15px;
   }
 
   &-list {
+    @include unlist;
     @include md-min {
       display: grid;
+      justify-content: end;
+
       gap: $gap-lg;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-      justify-content: end;
-      @include unlist;
+    }
+    @include md {
+      position: absolute;
+      top: 100%;
+      right: $gap;
+
+      display: none;
+
+      box-shadow: 3px 4px 20px -10px $color-black;
+
+      @include bg-color($color-gray, 0.8);
     }
 
-    @include md {
-      display: none;
+    &.active {
+      display: block;
     }
   }
 
   &-item {
-    padding: 10px 5px 0 5px;
-    font-size: 1.125em;
     letter-spacing: 0.1em;
-    line-height: 1.11em;
+
     color: $color-light;
-    font-weight: 400;
+
     font-family: $font-main;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 1.11em;
+
+    @include md-min {
+      padding: 10px 5px 0 5px;
+    }
+    @include md {
+      padding: 0;
+    }
   }
 
   &-link {
     display: block;
-    padding: 10px 0;
+
     transition: 0.4s;
+
+    @include md-min {
+      padding: 10px 0;
+    }
+    @include md {
+      margin: 10px 0;
+      padding: 5px $gap;
+    }
 
     &:hover,
     &:focus {
       color: $color-accent;
+    }
+  }
+
+  &-burger {
+    position: relative;
+
+    display: grid;
+    justify-content: end;
+
+    width: 30px;
+    height: 24px;
+
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
+
+    @include md-min {
+      display: none;
+    }
+
+    & span {
+      position: absolute;
+
+      display: block;
+
+      width: 100%;
+      height: 3px;
+
+      transition: 0.25s ease-in-out;
+      transform: rotate(0deg);
+
+      opacity: 1;
+      border-radius: 3px;
+      background: $color-light;
+
+      &:nth-last-child(1) {
+        top: 0;
+      }
+
+      &:nth-last-child(2),
+      &:nth-last-child(3) {
+        top: 9px;
+      }
+
+      &:nth-last-child(4) {
+        top: 18px;
+      }
+    }
+
+    &.active span:nth-child(1) {
+      opacity: 0;
+    }
+
+    &.active span:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    &.active span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+
+    &.active span:nth-child(4) {
+      opacity: 0;
     }
   }
 }

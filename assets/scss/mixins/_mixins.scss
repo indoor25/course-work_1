@@ -54,15 +54,17 @@
 
 @mixin btn-container {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+
   gap: $gap;
 }
 
 @mixin form-container {
   display: grid;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
   gap: $gap;
 }
