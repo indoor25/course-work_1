@@ -1,0 +1,1 @@
+[![EditorConfig](https://github.com/indoor25/course-work_1/actions/workflows/EditorConfig.yml/badge.svg)](https://github.com/indoor25/course-work_1/actions/workflows/EditorConfig.yml)
