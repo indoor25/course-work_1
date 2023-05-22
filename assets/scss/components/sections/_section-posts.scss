@@ -25,16 +25,19 @@ $item: 6;
 
       font-size: 2.5rem;
     }
+
     @include lg-md {
       margin-bottom: 42px;
 
       font-size: 2rem;
     }
+
     @include md {
       margin-bottom: 36px;
 
       font-size: 1.5rem;
     }
+
     @include sm {
       text-align: center;
     }
@@ -44,7 +47,20 @@ $item: 6;
   // .posts__container
 
   &__container {
-    padding-top: $gap-x5;
+    @include lg-min {
+      padding-top: $gap-x5;
+      padding-bottom: $gap-x5;
+    }
+
+    @include lg {
+      padding-top: $gap-x4;
+      padding-bottom: $gap-x4;
+    }
+
+    @include md {
+      padding-top: $gap-x3;
+      padding-bottom: $gap-x3;
+    }
 
     @extend %container;
   }
@@ -55,30 +71,34 @@ $item: 6;
     margin-bottom: $gap;
 
     gap: $gap;
+
     @include lg-min {
       grid-template-areas: "p_ar1 p_ar1 p_ar2 p_ar3"
-      "p_ar4 p_ar5 p_ar6 p_ar6";
+        "p_ar4 p_ar5 p_ar6 p_ar6";
       grid-template-columns: repeat(4, 1fr);
     }
+
     @include lg-md {
       grid-template-areas: "p_ar1 p_ar1 p_ar2"
-      "p_ar3 p_ar4 p_ar4"
-      "p_ar5 p_ar5 p_ar6";
+        "p_ar3 p_ar4 p_ar4"
+        "p_ar5 p_ar5 p_ar6";
       grid-template-columns: repeat(3, 1fr);
     }
+
     @include md-sm {
       grid-template-areas: "p_ar1 p_ar2"
-      "p_ar3 p_ar4"
-      "p_ar5 p_ar6";
+        "p_ar3 p_ar4"
+        "p_ar5 p_ar6";
       grid-template-columns: repeat(2, 1fr);
     }
+
     @include sm {
       grid-template-areas: "p_ar1"
-      "p_ar2"
-      "p_ar3"
-      "p_ar4"
-      "p_ar5"
-      "p_ar6";
+        "p_ar2"
+        "p_ar3"
+        "p_ar4"
+        "p_ar5"
+        "p_ar6";
       grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -163,18 +183,9 @@ $item: 6;
     line-height: 1.25em;
   }
 
-  // .posts__btns
+  // // .posts__btns
 
   &__btns {
     @include btn-container;
-    @include lg-min {
-      margin-bottom: $gap-x5;
-    }
-    @include lg-md {
-      margin-bottom: $gap-x4;
-    }
-    @include md {
-      margin-bottom: $gap-x3;
-    }
   }
 }

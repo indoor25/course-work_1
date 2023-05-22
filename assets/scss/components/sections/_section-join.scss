@@ -8,7 +8,17 @@
   // .join__articles-container
 
   &__articles-container {
-    padding: $gap-x5 $gap $gap-x5;
+    @include lg-min {
+      padding: $gap-x5 $gap $gap-x5;
+    }
+
+    @include lg {
+      padding: $gap-x4 $gap $gap-x4;
+    }
+
+    @include md {
+      padding: $gap-x3 $gap $gap-x3;
+    }
 
     @extend %container;
   }
