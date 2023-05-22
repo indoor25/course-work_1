@@ -15,6 +15,7 @@
 
   &-list {
     @include unlist;
+
     @include md-min {
       display: grid;
       justify-content: end;
@@ -22,6 +23,7 @@
       gap: $gap-lg;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     }
+
     @include md {
       position: absolute;
       top: 100%;
@@ -49,9 +51,6 @@
     font-weight: 400;
     line-height: 1.11em;
 
-    @include md-min {
-      padding: 10px 5px 0 5px;
-    }
     @include md {
       padding: 0;
     }
@@ -63,8 +62,9 @@
     transition: 0.4s;
 
     @include md-min {
-      padding: 10px 0;
+      padding: 20px 5px 10px 5px;
     }
+
     @include md {
       margin: 10px 0;
       padding: 5px $gap;

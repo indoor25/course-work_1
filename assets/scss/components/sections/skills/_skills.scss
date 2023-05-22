@@ -3,7 +3,13 @@
 
 .skills {
   &__btns {
-    padding-bottom: $gap;
+    @include sm-min {
+      padding-bottom: $gap-x2;
+    }
+
+    @include sm {
+      padding-bottom: $gap;
+    }
 
     @include btn-container;
   }

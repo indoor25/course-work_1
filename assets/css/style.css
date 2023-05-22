@@ -527,8 +527,6 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
 
-  padding-bottom: 20px;
-
   gap: 20px;
 }
 .skills__container {
@@ -645,8 +643,6 @@ a {
 }
 
 .join {
-  margin-top: 20px;
-
   background-color: #e5e5e5;
 }
 .join__articles-container {
@@ -991,6 +987,9 @@ a {
   .btn--main {
     min-width: 350px;
   }
+  .skills__btns {
+    padding-bottom: 40px;
+  }
   .skills__container {
     padding: 10px 10px 0 10px;
   }
@@ -1039,11 +1038,8 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
   }
-  .header__navbar-item {
-    padding: 10px 5px 0 5px;
-  }
   .header__navbar-link {
-    padding: 10px 0;
+    padding: 20px 5px 10px 5px;
   }
   .header__navbar-burger {
     display: none;
@@ -1233,6 +1229,9 @@ a {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
         flex-direction: column;
+  }
+  .skills__btns {
+    padding-bottom: 20px;
   }
   .skills__container {
     padding: 20px 20px 0 20px;
